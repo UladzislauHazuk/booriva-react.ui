@@ -1,15 +1,15 @@
-import Category from "../../components/Category/Category";
+import Payment from "../../components/Payment/Payment";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 
-function CategoryPage() {
+function PaymentPage() {
     return(
         <>
             <Header></Header>
-            <Category></Category>
+            <Payment></Payment>
             <Footer></Footer>
         </>
     )
 }
 
-export default CategoryPage;
+export default PaymentPage;

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import style from './Footer.module.css'
 import NavItem from './NavItem';
 
@@ -6,9 +7,9 @@ function Footer() {
 
     return(
         <div className={style['wrapper']}>
-            <div className={style['logo']}></div>
+            <Link to={'/'}><div className={style['logo']}></div></Link>
             <nav>
-            {arr.map((el, index) => <NavItem key={index} name={el} />)}
+                {arr.map((el, index) => <NavItem key={index} name={el} />)}
             </nav>
         </div>
     )

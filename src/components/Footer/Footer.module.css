@@ -30,7 +30,7 @@
     font: 400 16px 'Montserrat';
 }
 
-.wrapper nav p:hover {
+.wrapper nav a:hover {
     cursor: pointer;
     color: #FDA3C4;
 }

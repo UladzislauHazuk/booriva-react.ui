@@ -1,15 +1,15 @@
-import Ordering from "../../components/Ordering/Ordering";
+import Products from "../../components/Products/Products";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 
-function OrderingPage() {
+function ProductsPage() {
     return(
         <>
             <Header></Header>
-            <Ordering></Ordering>
+            <Products></Products>
             <Footer></Footer>
         </>
     )
 }
 
-export default OrderingPage;
+export default ProductsPage;

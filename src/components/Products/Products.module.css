@@ -19,7 +19,7 @@
     position: relative;
 }
 
-.block .model {
+.block .image {
     background-image: url(./assets/model.svg);
     background-repeat: no-repeat;
     background-size: contain;

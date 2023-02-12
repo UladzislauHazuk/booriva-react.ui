@@ -1,6 +1,6 @@
-import style from './Ordering.module.css'
+import style from './Payment.module.css'
 
-function Ordering() {
+function Payment() {
     return(
         <div className={style['wrapper']}>
             <div className={style['contact']}>
@@ -39,4 +39,4 @@ function Ordering() {
     )
 }
 
-export default Ordering
+export default Payment
