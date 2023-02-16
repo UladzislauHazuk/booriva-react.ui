@@ -9,7 +9,7 @@ function Header() {
         <div className={style['wrapper']}>
             <div className={style['header-wrapper']}>
                 <Link to={'/'}><div className={style['logo']}></div></Link>
-                <Link to={'basket'}><div className={style['basket']}></div></Link>
+                <Link to={'/basket'}><div className={style['basket']}></div></Link>
             </div>
             <nav>
                 {arr.map((el, index) => <NavItem key={index} name={el} />)}

@@ -20,7 +20,7 @@
 }
 
 .block .image {
-    background-image: url(./assets/model.svg);
+    /* background-image: url(./assets/model.svg); */
     background-repeat: no-repeat;
     background-size: contain;
     width: 456px;
@@ -41,7 +41,7 @@
     width: 410px;
 }
 
-.description p.title {
+.description p.name {
     font: 400 15px 'Montserrat';
     width: 295px;
 }

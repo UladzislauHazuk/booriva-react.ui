@@ -27,7 +27,7 @@ function Preview() {
         id: 1,
         image: 'img-clothes-1',
         price: '1 099 ₴',
-        title: 'Cвитшот вставка клетка0'
+        title: 'Cвитшот вставка клетка'
     },
     {
         id: 2,
