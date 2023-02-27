@@ -1,0 +1,102 @@
+.wrapper {
+    margin-top: 43px;
+    margin-bottom: 155px;
+}
+
+.wrapper .basket-header {
+    background-image: url(./assets/basket.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 360px;
+    height: 103px;
+    margin-bottom: 88px;
+}
+
+.wrapper .basket {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.basket .block {
+    position: relative;
+    display: flex;
+    width: 555px;
+    margin-bottom: 45px;
+}
+
+.block .model {
+    background-image: url(./assets/model.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 134px;
+    height: 177px;
+    margin-right: 14px;
+}
+
+.block .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.block .description h3 {
+    font: 600 16px 'Montserrat';
+    width: 170px;
+}
+
+.description p.size {
+    font: 400 14px 'Montserrat';
+}
+
+.description p.price {
+    font: 700 16px 'Montserrat';
+    color: #FDA3C4;
+}
+
+.block .delete {
+    background-image: url(./assets/delete.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.total {
+    margin: 80px 0 35px 0;
+}
+
+.total .quant,
+.total .sum {
+    padding: 20px 0;
+}
+
+.total .quant,
+.total .sum {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total .quant span {
+    font: 700 16px 'Montserrat';
+    color: #FDA3C4;
+}
+
+.total .sum span {
+    font: 700 16px 'Montserrat';
+}
+
+.wrapper .btn {
+    background-image: url(./assets/btn.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 240px;
+    height: 53px;
+    margin: auto;
+    cursor: pointer;
+}

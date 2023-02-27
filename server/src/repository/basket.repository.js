@@ -1,0 +1,58 @@
+const {
+    pool
+} = require('../DB');
+
+const getBasketDB = async () => {
+    const client = await pool.connect();
+    const sql = 'SELECT product.id, product.title, product.price FROM basket JOIN product ON product.id=basket.product_id';
+    const data = (await client.query(sql)).rows;
+    return data;
+}
+
+async function getBasketByIdDB(product_id) {
+  const client = await pool.connect();
+  const sql = 'SELECT product.id, product.title, product.price FROM basket JOIN product ON product.id=basket.product_id WHERE basket.id=$1';
+  const data = (await client.query(sql, [product_id])).rows;
+  return data;
+}
+
+const createBasketDB = async (product_id) => {
+    const client = await pool.connect();
+    try {
+      await client.query('BEGIN');
+      const sql = 'INSERT INTO basket (product_id) VALUES ($1) RETURNING *';
+      const data = (await client.query(sql, [product_id])).rows;
+      await client.query('COMMIT');
+      return data;
+    } catch (error) {
+      await client.query('ROLLBACK');
+      console.log(error);
+      return [];
+    }
+  };
+
+const deleteBasketDB = async (product_id) => {
+    const client = await pool.connect();
+    try {
+      await client.query('BEGIN');
+      const sql = `DELETE FROM basket WHERE product_id=$1 `;
+      await client.query(sql, [product_id]);
+      const sqlSelect = 'SELECT product.id, product.title, product.price FROM basket JOIN product ON product.id=basket.product_id ';
+      const data = (await client.query(sqlSelect)).rows;
+  
+      await client.query('COMMIT');
+      console.log(data);
+      return data;
+    } catch (error) {
+      await client.query('ROLLBACK');
+      console.log(error);
+      return [];
+    }
+  };
+
+module.exports = {
+    getBasketDB,
+    getBasketByIdDB,
+    createBasketDB,
+    deleteBasketDB
+}
